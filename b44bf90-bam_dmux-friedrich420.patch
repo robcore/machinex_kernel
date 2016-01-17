@@ -1,0 +1,22 @@
+From b44bf90e5fce1f4c32e4a8a8b3abe56c12d9eae5 Mon Sep 17 00:00:00 2001
+From: friedrich420 <kelpidorou@yahoo.com>
+Date: Sun, 3 May 2015 15:15:17 +0300
+Subject: [PATCH] Makefile and bam_dmux.c
+
+---
+ arch/arm/mach-msm/bam_dmux.c |  2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/arch/arm/mach-msm/bam_dmux.c b/arch/arm/mach-msm/bam_dmux.c
+index bd7e650..bf6bb94 100755
+--- a/arch/arm/mach-msm/bam_dmux.c
++++ b/arch/arm/mach-msm/bam_dmux.c
+@@ -2561,7 +2561,7 @@ static ssize_t show_waketime(struct device *dev,
+ 	if (!bamDmux_pkt_dev)
+ 		return 0;
+ 
+-	return snprintf(buf, sizeof(buf), "%u\n", wakelock_timeout);
++	return snprintf(buf, sizeof(*buf), "%u\n", wakelock_timeout);
+ }
+ 
+ static ssize_t store_waketime(struct device *dev,
